@@ -1,52 +1,8 @@
+<% provide(:title, "首页") %> 
 
-<header class="navbar navbar-fixed-top navbar-inverse">
-   <div class="container">
-        <%= link_to "首页", '#', id: "logo" %> 
-        <nav>
-            <ul class="nav navbar-nav navbar-right"> 
-            <li><%= link_to "登陆", '#' %></li> 
-            <li><%= link_to "注册", '#' %></li>
-            <li><%= link_to "预约", '#' %></li>
-            <li><%= link_to "评价", '#' %></li>
-            <li><%= link_to "财务", '#' %></li>
-            <li><%= link_to "联系我们", '#' %></li>
+<div class="center jumbotron">
+ <h1>Welcome to the Sample App</h1>
 
-          
-            </ul>
-         </nav>
-    </div>
- </header>
-
-  
-  <body>
-
-     <div class="jumbotron">
-       <div class="container">
-           <h1>welcome to the shop</h1>
-  
-          <p><a class="btn btn-primary btn-lg" href="#" role="button">注册</a></p>
-      </div>
-
-     </div> 
-     <div class="alert alert-info" role="alert">餐厅实景</div>
-
-   
-     <div class="row">
-     <div class="col-xs-6 col-md-3">
-       <div class="thumbnail">
-       <%= link_to image_tag("cc1.jpeg", alt: "Rails logo") %></div>
-       <%= link_to image_tag("cc2.jpeg", alt: "Rails logo") %></div>
-       <%= link_to image_tag("cc3.jpeg", alt: "Rails logo") %></div>
-       </div>
-     </div>
-    </div>
-      
+<%= link_to "注册", '#', class: "btn btn-lg btn-primary" %> 
+</div>
     
-    </body>
-
-
- 
-    <footer>
-        
-          <p class="copyright text-muted">Copyright &copy; 2017</p>
-    </footer>

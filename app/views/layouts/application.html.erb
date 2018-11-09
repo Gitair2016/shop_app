@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
+
   <head>
-    <title>Welcome to the shop web</title>
+  <title><%=yield(:title) %> |Welcome to the shop web</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -9,7 +10,42 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
+  
   <body>
-    <%= yield %>
+        <header class="navbar navbar-fixed-top navbar-inverse"> 
+          <div class="container">
+             <%= link_to "首页", '#', id: "logo" %> <nav>
+                <ul class="nav navbar-nav navbar-right">
+                     <li><%= link_to "主页", '#' %></li>
+                     <li><%= link_to "shop展示", '#' %></li>
+                     <li><%= link_to "财务", '#' %></li>
+                     <li><%= link_to "评价", '#' %></li>
+                     <% if logged_in? %>
+                     <li class ="dropdown" >
+                       
+                      <button class="btn dropdown-toggle" id="mydropdownmenu" data-toggle="dropdown">用户信息</button>
+           
+                       <ul class = "dropdown-menu">
+                        <li><%= link_to "我的关注", current_user %></li>
+                        <li><%= link_to "修改资料", edit_vip_path(current_user) %></li>
+                        <li><%= link_to "我的评价", '#' %></li>
+                        <li><%= link_to "退出登陆", dengchu_path, method: "delete" %></li>
+                       </ul>
+                       <% else %>
+
+
+                         <li><%= link_to "登陆", denglu_path %></li>
+                     <% end %>
+                </ul> 
+              </nav>
+           </div>
+        </header>
+
+      <div class = 'container' >
+          <%= yield %>
+      </div>    
   </body>
-</html>
+
+  </html>
+
+
