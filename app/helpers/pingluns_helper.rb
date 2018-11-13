@@ -1,0 +1,2 @@
+module PinglunsHelper
+end

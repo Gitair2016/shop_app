@@ -1,0 +1,17 @@
+<%= form_tag("/index", method: "get") do %>
+  <%= label_tag(:search, "Search for:") %>
+  <%= text_field_tag :search, params[:search] %>
+  <%= submit_tag("查找") %>
+<% end %>
+
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+
+<%= render @pingluns   %>
+
+</div>
+</div>
+
+
+

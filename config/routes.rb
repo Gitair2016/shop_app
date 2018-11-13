@@ -9,7 +9,13 @@ Rails.application.routes.draw do
   post '/denglu', to:"logins#create"
   delete '/dengchu', to:"logins#destory"
   get '/edit', to:"vips#edit"
+
+   get '/show', to:'static_pages#show'
+   post '/show', to:'pingluns#create'
+   get '/index',to:'pingluns#index'
+   delete '/show',to:'pingluns#destroy'
  
   
   resources :vips
+  resources :pingluns,  only:[:create, :destory]
 end

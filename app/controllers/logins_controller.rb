@@ -6,7 +6,7 @@ class LoginsController < ApplicationController
     vip = Vip.find_by(email:params[:login][:email].downcase)
     if vip && vip.authenticate(params[:login][:password])
       log_in(vip)
-      redirect_to vip
+      redirect_to root_url
     else
       render 'new'
     end     

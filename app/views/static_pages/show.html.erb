@@ -1,0 +1,27 @@
+<% provide(:title, @vip.name) %>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+<%= form_for(@pinglun, url:pingluns_path) do |f| %>
+    <div class="field">
+       <%= f.text_area :content, placeholder: "发表评论..." %> 
+       </div>
+
+       <div class ="status">
+       <li><%= f.radio_button :status, value='2'%>好评</li>
+       <li><%= f.radio_button :status, value='3'%>中评</li>
+       <li><%= f.radio_button :status, value='4'%>差评</li>
+
+       
+       </div>
+       <%= f.submit "发布", class: "btn btn-primary" %> 
+       <% end %>
+
+
+       </div>
+</div>
+
+
+
+<h4>评论总数<%= @vip.pingluns.count %> </h4>
+
+<%= render @pingluns %> 

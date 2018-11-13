@@ -1,1 +1,5 @@
-<%= @vip.email %>
+<% provide(:title, @vip.name) %>
+注册邮箱：<%= @vip.email %>
+注册用户名：<%= @vip.name %>
+<%= render @pingluns %>
+

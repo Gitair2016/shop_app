@@ -14,6 +14,7 @@ class VipsController < ApplicationController
 
   def show
     @vip = Vip.find(params[:id])
+    @pingluns =@vip.pingluns
   end  
    
   def edit

@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_07_094552) do
+ActiveRecord::Schema.define(version: 2018_11_10_103053) do
+
+  create_table "pingluns", force: :cascade do |t|
+    t.text "content"
+    t.integer "vip_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "status"
+    t.index ["vip_id", "created_at"], name: "index_pingluns_on_vip_id_and_created_at"
+    t.index ["vip_id"], name: "index_pingluns_on_vip_id"
+  end
 
   create_table "vips", force: :cascade do |t|
     t.string "name"

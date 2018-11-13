@@ -1,0 +1,28 @@
+
+
+<li>
+
+<span class="user"><%= link_to pinglun.vip.name, pinglun.vip %></span> 
+<span class="content"><%= pinglun.content %></span>
+
+
+<% if pinglun.status == 3%>
+        <%  bbb = "中评" %>
+    <% elsif   pinglun.status == 4%>
+      <%  bbb="差评"%>
+      <% else   pinglun.status == 2%>
+      <%  bbb="好评"%>
+      <% end  %>
+ 
+<span class="jibie"><%=bbb%></span>
+<span class="shanchu"><%= link_to "删除", show_path, :confirm =>"确定？", :method =>:delete %></span>
+
+
+
+
+
+
+</li>
+
+
+
