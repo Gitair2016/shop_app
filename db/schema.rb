@@ -10,7 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_10_103053) do
+ActiveRecord::Schema.define(version: 2018_11_13_073144) do
+
+  create_table "caiwus", force: :cascade do |t|
+    t.integer "zhuohao"
+    t.integer "jine"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "pingluns", force: :cascade do |t|
     t.text "content"

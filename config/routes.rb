@@ -14,8 +14,13 @@ Rails.application.routes.draw do
    post '/show', to:'pingluns#create'
    get '/index',to:'pingluns#index'
    delete '/show',to:'pingluns#destroy'
+
+   get'/caiwu', to:'caiwus#new'
+   post'/caiwu', to:'caiwus#create'
+   get'/caiwus', to:'caiwus#index'
  
   
   resources :vips
   resources :pingluns,  only:[:create, :destory]
+  resources :caiwus
 end

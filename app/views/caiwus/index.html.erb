@@ -1,0 +1,19 @@
+
+
+<%= form_tag("/caiwus", method: "get") do %>
+  <h3>开始时间：</h3><%= select_date Date.today, prefix: :start_date %>
+  <h3>结束时间：</h3><%= select_date Date.today, prefix: :end_date %>
+ 
+  <%= submit_tag("查 询") %>
+<% end %>
+
+<h1>财务明细</h1>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+
+<%= render @caiwus %>
+
+</div>
+</div>
+
+总计：<%= @total %> 元

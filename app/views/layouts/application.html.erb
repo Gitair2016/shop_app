@@ -18,7 +18,16 @@
                 <ul class="nav navbar-nav navbar-right">
                      <li><%= link_to "预订", '#' %></li>
                      <li><%= link_to "shop展示", '#' %></li>
-                     <li><%= link_to "财务", '#' %></li>
+                    
+                     <button class="btn dropdown-toggle" id="mydropdownmenu" data-toggle="dropdown"> 财务</button>
+           
+                       <ul class = "dropdown-menu">
+                       
+                        <li><%= link_to "财务录入", caiwu_path %></li>
+                    
+                        <li><%= link_to "财务汇总", caiwus_path %></li>
+                        
+                       </ul>
                      <li><%= link_to "评价", index_path %></li>
                      <% if logged_in? %>
                      <li class ="dropdown" >

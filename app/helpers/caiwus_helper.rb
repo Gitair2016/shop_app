@@ -1,0 +1,2 @@
+module CaiwusHelper
+end
