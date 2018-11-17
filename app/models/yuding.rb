@@ -1,0 +1,6 @@
+class Yuding < ApplicationRecord
+
+    
+
+end
+

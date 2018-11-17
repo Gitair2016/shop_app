@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_13_073144) do
+ActiveRecord::Schema.define(version: 2018_11_14_124343) do
 
   create_table "caiwus", force: :cascade do |t|
     t.integer "zhuohao"
@@ -35,6 +35,15 @@ ActiveRecord::Schema.define(version: 2018_11_13_073144) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "password_digest"
+  end
+
+  create_table "yudings", force: :cascade do |t|
+    t.integer "zhuohao"
+    t.datetime "starttime"
+    t.datetime "endtime"
+    t.integer "status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

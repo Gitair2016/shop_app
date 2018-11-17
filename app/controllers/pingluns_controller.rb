@@ -23,7 +23,7 @@ class PinglunsController < ApplicationController
     def destroy
         @pinglun = Pinglun.find_by(params[:vip_id])
         @pinglun.destroy
-        redirect_to show_path, :notice=>"已删除"
+        redirect_to index_path
     end 
     
     private

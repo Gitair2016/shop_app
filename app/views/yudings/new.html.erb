@@ -1,0 +1,17 @@
+<h1> 预订</h1>
+<%= form_for(@yuding, method: "post") do |f|%>
+  
+    <%= f.select(:zhuohao, [1,2,3,4,5,6]) %>
+
+    开始时间：
+    
+    <%= f.datetime_select  :starttime%>
+    结束时间：
+    <%= f.datetime_select  :endtime%>
+    <%= f.hidden_field(:status, :value=>"1") %>
+    <%= f.submit("预订") %>
+    <% end %>
+
+  <div>
+    <%= render @yudings %>
+</div>

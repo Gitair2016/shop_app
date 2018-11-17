@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  zhuohao: 
+  starttime: 2018-11-14 20:43:44
+  endtime: 2018-11-14 20:43:44
+  status: 1
+
+two:
+  zhuohao: 
+  starttime: 2018-11-14 20:43:44
+  endtime: 2018-11-14 20:43:44
+  status: 1

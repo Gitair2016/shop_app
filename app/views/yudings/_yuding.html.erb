@@ -1,0 +1,18 @@
+
+    <% if yuding.status == 1  %>
+      <%   bbb = "已预订" %>
+      <%   else  %>
+        <% bbb = "已取消"  %>
+        <% end %>
+       
+    
+    
+       
+  <li>桌号：<%=yuding.zhuohao %> 预定时间:<%=yuding.starttime %>-<%=yuding.endtime %>状态:<%=bbb%>
+  操作:<%= form_for(@yuding, :url => { :controller=>"yudings",:action => "update"},method: "patch") do |f|%>
+    <%= f.hidden_field(:id, :value=>"#{yuding.id}") %>
+    <%= f.submit("取消")%>
+    <% end %>
+</li>
+
+  

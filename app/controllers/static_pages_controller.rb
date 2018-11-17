@@ -4,6 +4,9 @@ class StaticPagesController < ApplicationController
         
         
     end
+
+    def shop
+    end    
     
     def show
         @vip = current_user
